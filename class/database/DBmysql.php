@@ -159,3 +159,4 @@ class DBmysql implements Database
         return $this->error;
     }
 }
+
