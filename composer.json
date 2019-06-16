@@ -1,0 +1,13 @@
+{
+    "name": "lookas/paczkolab",
+    "authors": [
+        {
+            "name": "LookasNorman",
+            "email": "lookasziebice@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    }
+}
