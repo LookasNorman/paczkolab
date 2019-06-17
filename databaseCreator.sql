@@ -1,5 +1,7 @@
 CREATE DATABASE paczkolab;
 
+USE paczkolab;
+
 CREATE TABLE Size (
                       id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                       size varchar(2) NOT NULL,
