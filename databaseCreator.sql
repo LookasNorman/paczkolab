@@ -9,14 +9,14 @@ CREATE TABLE Size (
 );
 CREATE TABLE Address (
                       id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                      city varchar(2) NOT NULL,
+                      city varchar(32) NOT NULL,
                       postal_code varchar(10) NOT NULL,
                       street varchar(192) NOT NULL,
                       flat_number varchar(192) NOT NULL
 );
 CREATE TABLE User (
                          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                         name varchar(2) NOT NULL,
+                         name varchar(62) NOT NULL,
                          surname varchar(10) NOT NULL,
                          credits int(10) NOT NULL,
                          address_id INT UNSIGNED,
