@@ -1,4 +1,8 @@
 <?php
+/**
+ * Author: Lukasz Konieczny
+ * lookasziebice@gmail.com
+ */
 
 use PHPUnit\Framework\TestCase;
 
@@ -51,7 +55,32 @@ class AddressTest extends TestCase
 
     public function testDeleteAddress()
     {
-        $address = new Address();
+        $id = 2;
+        $city = 'Warszawa';
+        $postalCode = '02-003';
+        $street = 'Warszawska';
+        $flatNumber = '23';
+
+        $address = new Address($id, $city, $postalCode, $street, $flatNumber);
+        $this->assertTrue($address->checkIfAddressExist($id));
+
+        $address->deleteAddress($id);
+        $this->assertFalse($address->checkIfAddressExist($id));
+    }
+
+    public function testViewAddress()
+    {
+        $id = 2;
+        $city = 'Warszawa';
+        $postalCode = '02-003';
+        $street = 'Warszawska';
+        $flatNumber = '23';
+        $address = new Address($id, $city, $postalCode, $street, $flatNumber);
+
+        $address2 = new Address();
+        $address2->getAddressData($id);
+
+        $this->assertSame($address, $address2);
 
     }
 
