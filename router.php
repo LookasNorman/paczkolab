@@ -18,17 +18,17 @@ require (__DIR__ . '/config.php');
 
 //connect to DB
 $conn = new DBmysql();
-
+$errorDB = $conn->getError();
 //check if the class parametr is set
 $pathId = isset($path[2]) ? $path[2] : null;
 
-if (!isset($conn->getError())) {//process request if no db error
+if (!isset($errorDB)) {//process request if no db error
     include_once __DIR__.'/restEndPoints/'.$className.'.php';
 }
 
 header('Content-Type: application/json');//return json header
 
-if (isset($conn->getError())) {
+if (isset($errorDB)) {
     header("HTTP/1.0 400 Bad Request");//return proper http code if error
 }
 
