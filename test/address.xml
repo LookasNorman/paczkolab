@@ -1,0 +1,609 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="paczkolab">
+        <table_data name="address"><row>
+                    <field name="id">1</field>
+                    <field name="city">Zduńska Wola</field>
+                    <field name="postal_code">12-210</field>
+                    <field name="street">Kopernika Mikołaja</field>
+                    <field name="flat_number">44A</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="city">Zgierz</field>
+                    <field name="postal_code">75-377</field>
+                    <field name="street">Brzoskwiniowa</field>
+                    <field name="flat_number">97A</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="city">Świecie</field>
+                    <field name="postal_code">11-130</field>
+                    <field name="street">Wybickiego Józefa</field>
+                    <field name="flat_number">95A</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="city">Białystok</field>
+                    <field name="postal_code">26-240</field>
+                    <field name="street">Dmowskiego Romana</field>
+                    <field name="flat_number">12/86</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="city">Konstancin-Jeziorna</field>
+                    <field name="postal_code">86-026</field>
+                    <field name="street">Spokojna</field>
+                    <field name="flat_number">11A</field>
+                </row><row>
+                    <field name="id">6</field>
+                    <field name="city">Jeziorna</field>
+                    <field name="postal_code">52-389</field>
+                    <field name="street">Piaskowa</field>
+                    <field name="flat_number">01A</field>
+                </row><row>
+                    <field name="id">7</field>
+                    <field name="city">Brodnica</field>
+                    <field name="postal_code">99-046</field>
+                    <field name="street">Lechicka</field>
+                    <field name="flat_number">36/24</field>
+                </row><row>
+                    <field name="id">8</field>
+                    <field name="city">Płock</field>
+                    <field name="postal_code">27-958</field>
+                    <field name="street">Skośna</field>
+                    <field name="flat_number">82</field>
+                </row><row>
+                    <field name="id">9</field>
+                    <field name="city">Malbork</field>
+                    <field name="postal_code">41-841</field>
+                    <field name="street">Zamkowa</field>
+                    <field name="flat_number">67A/52</field>
+                </row><row>
+                    <field name="id">10</field>
+                    <field name="city">Lędziny</field>
+                    <field name="postal_code">83-400</field>
+                    <field name="street">Jagiellońskie Os.</field>
+                    <field name="flat_number">99A/34</field>
+                </row><row>
+                    <field name="id">11</field>
+                    <field name="city">Otwock</field>
+                    <field name="postal_code">87-687</field>
+                    <field name="street">Kopalniana</field>
+                    <field name="flat_number">09</field>
+                </row><row>
+                    <field name="id">12</field>
+                    <field name="city">Ciechanów</field>
+                    <field name="postal_code">08-291</field>
+                    <field name="street">Siewna</field>
+                    <field name="flat_number">97A</field>
+                </row><row>
+                    <field name="id">13</field>
+                    <field name="city">Bochnia</field>
+                    <field name="postal_code">97-852</field>
+                    <field name="street">Żelazna</field>
+                    <field name="flat_number">59A/68</field>
+                </row><row>
+                    <field name="id">14</field>
+                    <field name="city">Police</field>
+                    <field name="postal_code">58-998</field>
+                    <field name="street">Struga Andrzeja</field>
+                    <field name="flat_number">02</field>
+                </row><row>
+                    <field name="id">15</field>
+                    <field name="city">Bydgoszcz</field>
+                    <field name="postal_code">23-873</field>
+                    <field name="street">Okulickiego Leopolda</field>
+                    <field name="flat_number">14</field>
+                </row><row>
+                    <field name="id">16</field>
+                    <field name="city">Kalisz</field>
+                    <field name="postal_code">37-256</field>
+                    <field name="street">Głogowa</field>
+                    <field name="flat_number">18A</field>
+                </row><row>
+                    <field name="id">17</field>
+                    <field name="city">Szczytno</field>
+                    <field name="postal_code">89-777</field>
+                    <field name="street">Pułaskiego Kazimierza</field>
+                    <field name="flat_number">20A/30</field>
+                </row><row>
+                    <field name="id">18</field>
+                    <field name="city">Braniewo</field>
+                    <field name="postal_code">87-250</field>
+                    <field name="street">Żołnierska</field>
+                    <field name="flat_number">80A</field>
+                </row><row>
+                    <field name="id">19</field>
+                    <field name="city">Czechowice-Dziedzice</field>
+                    <field name="postal_code">10-643</field>
+                    <field name="street">Cicha</field>
+                    <field name="flat_number">01/15</field>
+                </row><row>
+                    <field name="id">20</field>
+                    <field name="city">Szwecja</field>
+                    <field name="postal_code">66-437</field>
+                    <field name="street">Wiejska</field>
+                    <field name="flat_number">15</field>
+                </row><row>
+                    <field name="id">21</field>
+                    <field name="city">Białystok</field>
+                    <field name="postal_code">70-766</field>
+                    <field name="street">Solidarności Al.</field>
+                    <field name="flat_number">77A</field>
+                </row><row>
+                    <field name="id">22</field>
+                    <field name="city">Pułtusk</field>
+                    <field name="postal_code">77-845</field>
+                    <field name="street">Łokietka Władysława</field>
+                    <field name="flat_number">61A</field>
+                </row><row>
+                    <field name="id">23</field>
+                    <field name="city">Ostróda</field>
+                    <field name="postal_code">75-282</field>
+                    <field name="street">Kołłątaja Hugo</field>
+                    <field name="flat_number">80/88</field>
+                </row><row>
+                    <field name="id">24</field>
+                    <field name="city">Toruń</field>
+                    <field name="postal_code">80-442</field>
+                    <field name="street">Szeroka</field>
+                    <field name="flat_number">02A</field>
+                </row><row>
+                    <field name="id">25</field>
+                    <field name="city">Cieszyn</field>
+                    <field name="postal_code">88-500</field>
+                    <field name="street">Kołłątaja Hugo</field>
+                    <field name="flat_number">53/78</field>
+                </row><row>
+                    <field name="id">26</field>
+                    <field name="city">Tarnów</field>
+                    <field name="postal_code">20-007</field>
+                    <field name="street">Kasprowicza Jana</field>
+                    <field name="flat_number">04A</field>
+                </row><row>
+                    <field name="id">27</field>
+                    <field name="city">Lędziny</field>
+                    <field name="postal_code">43-295</field>
+                    <field name="street">Chorzowska</field>
+                    <field name="flat_number">13A/84</field>
+                </row><row>
+                    <field name="id">28</field>
+                    <field name="city">Stargard Szczeciński</field>
+                    <field name="postal_code">53-493</field>
+                    <field name="street">Jerozolimskie Al.</field>
+                    <field name="flat_number">37A</field>
+                </row><row>
+                    <field name="id">29</field>
+                    <field name="city">Kwidzyn</field>
+                    <field name="postal_code">51-482</field>
+                    <field name="street">Stwosza Wita</field>
+                    <field name="flat_number">93</field>
+                </row><row>
+                    <field name="id">30</field>
+                    <field name="city">Zawiercie</field>
+                    <field name="postal_code">68-162</field>
+                    <field name="street">Jodłowa</field>
+                    <field name="flat_number">51A/40</field>
+                </row><row>
+                    <field name="id">31</field>
+                    <field name="city">Kielce</field>
+                    <field name="postal_code">16-773</field>
+                    <field name="street">Zielona</field>
+                    <field name="flat_number">38/82</field>
+                </row><row>
+                    <field name="id">32</field>
+                    <field name="city">Gliwice</field>
+                    <field name="postal_code">67-904</field>
+                    <field name="street">Szczecińska</field>
+                    <field name="flat_number">12</field>
+                </row><row>
+                    <field name="id">33</field>
+                    <field name="city">Oświęcim</field>
+                    <field name="postal_code">53-419</field>
+                    <field name="street">Mokra</field>
+                    <field name="flat_number">38A/47</field>
+                </row><row>
+                    <field name="id">34</field>
+                    <field name="city">Babienica</field>
+                    <field name="postal_code">07-317</field>
+                    <field name="street">Wyzwolenia</field>
+                    <field name="flat_number">49A/64</field>
+                </row><row>
+                    <field name="id">35</field>
+                    <field name="city">Chojnice</field>
+                    <field name="postal_code">97-951</field>
+                    <field name="street">Majowa</field>
+                    <field name="flat_number">21A</field>
+                </row><row>
+                    <field name="id">36</field>
+                    <field name="city">Grodzisk Mazowiecki</field>
+                    <field name="postal_code">12-838</field>
+                    <field name="street">Okrężna</field>
+                    <field name="flat_number">44</field>
+                </row><row>
+                    <field name="id">37</field>
+                    <field name="city">Turek</field>
+                    <field name="postal_code">18-906</field>
+                    <field name="street">Głogowska</field>
+                    <field name="flat_number">93</field>
+                </row><row>
+                    <field name="id">38</field>
+                    <field name="city">Nowe Kramsko</field>
+                    <field name="postal_code">25-038</field>
+                    <field name="street">Brzozowa</field>
+                    <field name="flat_number">48/27</field>
+                </row><row>
+                    <field name="id">39</field>
+                    <field name="city">Białystok</field>
+                    <field name="postal_code">88-126</field>
+                    <field name="street">Świdnicka</field>
+                    <field name="flat_number">05/66</field>
+                </row><row>
+                    <field name="id">40</field>
+                    <field name="city">Płazów</field>
+                    <field name="postal_code">07-856</field>
+                    <field name="street">Niedziałkowskiego Mieczysława</field>
+                    <field name="flat_number">75A/98</field>
+                </row><row>
+                    <field name="id">41</field>
+                    <field name="city">Ostrowiec Świętokrzyski</field>
+                    <field name="postal_code">87-891</field>
+                    <field name="street">Letnia</field>
+                    <field name="flat_number">12</field>
+                </row><row>
+                    <field name="id">42</field>
+                    <field name="city">Kamień</field>
+                    <field name="postal_code">77-881</field>
+                    <field name="street">Pogodna</field>
+                    <field name="flat_number">19</field>
+                </row><row>
+                    <field name="id">43</field>
+                    <field name="city">Pęcice</field>
+                    <field name="postal_code">75-193</field>
+                    <field name="street">Kielecka</field>
+                    <field name="flat_number">94A/49</field>
+                </row><row>
+                    <field name="id">44</field>
+                    <field name="city">Świdnik</field>
+                    <field name="postal_code">80-834</field>
+                    <field name="street">Rybacka</field>
+                    <field name="flat_number">91A</field>
+                </row><row>
+                    <field name="id">45</field>
+                    <field name="city">Zborowskie</field>
+                    <field name="postal_code">83-420</field>
+                    <field name="street">Główna</field>
+                    <field name="flat_number">35/05</field>
+                </row><row>
+                    <field name="id">46</field>
+                    <field name="city">Płazów</field>
+                    <field name="postal_code">10-469</field>
+                    <field name="street">Nowa</field>
+                    <field name="flat_number">27</field>
+                </row><row>
+                    <field name="id">47</field>
+                    <field name="city">Koło</field>
+                    <field name="postal_code">61-937</field>
+                    <field name="street">Legionów</field>
+                    <field name="flat_number">02</field>
+                </row><row>
+                    <field name="id">48</field>
+                    <field name="city">Kołobrzeg</field>
+                    <field name="postal_code">99-036</field>
+                    <field name="street">Perłowa</field>
+                    <field name="flat_number">75A</field>
+                </row><row>
+                    <field name="id">49</field>
+                    <field name="city">Krotoszyn</field>
+                    <field name="postal_code">91-379</field>
+                    <field name="street">Wrzosowa</field>
+                    <field name="flat_number">31/74</field>
+                </row><row>
+                    <field name="id">50</field>
+                    <field name="city">Piła</field>
+                    <field name="postal_code">22-196</field>
+                    <field name="street">Pola Wincentego</field>
+                    <field name="flat_number">69/49</field>
+                </row><row>
+                    <field name="id">51</field>
+                    <field name="city">Otwock</field>
+                    <field name="postal_code">03-383</field>
+                    <field name="street">Dolna</field>
+                    <field name="flat_number">38A/91</field>
+                </row><row>
+                    <field name="id">52</field>
+                    <field name="city">Lubartów</field>
+                    <field name="postal_code">09-190</field>
+                    <field name="street">Prosta</field>
+                    <field name="flat_number">43</field>
+                </row><row>
+                    <field name="id">53</field>
+                    <field name="city">Piekary Śląskie</field>
+                    <field name="postal_code">23-096</field>
+                    <field name="street">Zamkowa</field>
+                    <field name="flat_number">65/13</field>
+                </row><row>
+                    <field name="id">54</field>
+                    <field name="city">Magdalenka</field>
+                    <field name="postal_code">13-099</field>
+                    <field name="street">Szczęśliwa</field>
+                    <field name="flat_number">70A/37</field>
+                </row><row>
+                    <field name="id">55</field>
+                    <field name="city">Czaplinek</field>
+                    <field name="postal_code">30-413</field>
+                    <field name="street">Piotrkowska</field>
+                    <field name="flat_number">72A</field>
+                </row><row>
+                    <field name="id">56</field>
+                    <field name="city">Zborowskie</field>
+                    <field name="postal_code">38-845</field>
+                    <field name="street">Wolności</field>
+                    <field name="flat_number">58/00</field>
+                </row><row>
+                    <field name="id">57</field>
+                    <field name="city">Wrocław</field>
+                    <field name="postal_code">97-257</field>
+                    <field name="street">Rybacka</field>
+                    <field name="flat_number">49/71</field>
+                </row><row>
+                    <field name="id">58</field>
+                    <field name="city">Lubartów</field>
+                    <field name="postal_code">07-375</field>
+                    <field name="street">Osiedlowa</field>
+                    <field name="flat_number">33A</field>
+                </row><row>
+                    <field name="id">59</field>
+                    <field name="city">Nowy Sącz</field>
+                    <field name="postal_code">57-753</field>
+                    <field name="street">Modlińska</field>
+                    <field name="flat_number">55A/45</field>
+                </row><row>
+                    <field name="id">60</field>
+                    <field name="city">Gniezno</field>
+                    <field name="postal_code">40-094</field>
+                    <field name="street">Sienkiewicza Henryka</field>
+                    <field name="flat_number">58/25</field>
+                </row><row>
+                    <field name="id">61</field>
+                    <field name="city">Mielec</field>
+                    <field name="postal_code">25-346</field>
+                    <field name="street">Piękna</field>
+                    <field name="flat_number">95A</field>
+                </row><row>
+                    <field name="id">62</field>
+                    <field name="city">Pułtusk</field>
+                    <field name="postal_code">87-906</field>
+                    <field name="street">Polna</field>
+                    <field name="flat_number">69</field>
+                </row><row>
+                    <field name="id">63</field>
+                    <field name="city">Otwock</field>
+                    <field name="postal_code">76-536</field>
+                    <field name="street">Jagiełły Władysława</field>
+                    <field name="flat_number">45</field>
+                </row><row>
+                    <field name="id">64</field>
+                    <field name="city">Pawłowice</field>
+                    <field name="postal_code">55-119</field>
+                    <field name="street">Dąbrówki</field>
+                    <field name="flat_number">21</field>
+                </row><row>
+                    <field name="id">65</field>
+                    <field name="city">Gliwice</field>
+                    <field name="postal_code">01-874</field>
+                    <field name="street">Jałowcowa</field>
+                    <field name="flat_number">83A/69</field>
+                </row><row>
+                    <field name="id">66</field>
+                    <field name="city">Sosnowiec</field>
+                    <field name="postal_code">64-821</field>
+                    <field name="street">Jaskółcza</field>
+                    <field name="flat_number">24A/85</field>
+                </row><row>
+                    <field name="id">67</field>
+                    <field name="city">Bartoszyce</field>
+                    <field name="postal_code">52-044</field>
+                    <field name="street">Lubelska</field>
+                    <field name="flat_number">85A</field>
+                </row><row>
+                    <field name="id">68</field>
+                    <field name="city">Wągrowiec</field>
+                    <field name="postal_code">49-873</field>
+                    <field name="street">Wolności Pl.</field>
+                    <field name="flat_number">27A/59</field>
+                </row><row>
+                    <field name="id">69</field>
+                    <field name="city">Nowy Targ</field>
+                    <field name="postal_code">31-662</field>
+                    <field name="street">Witosa Wincentego</field>
+                    <field name="flat_number">84/57</field>
+                </row><row>
+                    <field name="id">70</field>
+                    <field name="city">Świętochłowice</field>
+                    <field name="postal_code">84-494</field>
+                    <field name="street">Świerkowa</field>
+                    <field name="flat_number">02</field>
+                </row><row>
+                    <field name="id">71</field>
+                    <field name="city">Tarnów</field>
+                    <field name="postal_code">41-907</field>
+                    <field name="street">Leszczynowa</field>
+                    <field name="flat_number">21A/36</field>
+                </row><row>
+                    <field name="id">72</field>
+                    <field name="city">Kętrzyn</field>
+                    <field name="postal_code">33-286</field>
+                    <field name="street">Asnyka Adama</field>
+                    <field name="flat_number">38A/98</field>
+                </row><row>
+                    <field name="id">73</field>
+                    <field name="city">Bełchatów</field>
+                    <field name="postal_code">13-810</field>
+                    <field name="street">Bracka</field>
+                    <field name="flat_number">74A/07</field>
+                </row><row>
+                    <field name="id">74</field>
+                    <field name="city">Kuźnica Masłońska</field>
+                    <field name="postal_code">91-694</field>
+                    <field name="street">Piłsudskiego Józefa</field>
+                    <field name="flat_number">60</field>
+                </row><row>
+                    <field name="id">75</field>
+                    <field name="city">Świecie</field>
+                    <field name="postal_code">11-619</field>
+                    <field name="street">Krańcowa</field>
+                    <field name="flat_number">97A/56</field>
+                </row><row>
+                    <field name="id">76</field>
+                    <field name="city">Władysławowo</field>
+                    <field name="postal_code">41-149</field>
+                    <field name="street">Północna</field>
+                    <field name="flat_number">90/70</field>
+                </row><row>
+                    <field name="id">77</field>
+                    <field name="city">Lubartów</field>
+                    <field name="postal_code">41-701</field>
+                    <field name="street">Miarki Karola</field>
+                    <field name="flat_number">58/11</field>
+                </row><row>
+                    <field name="id">78</field>
+                    <field name="city">Malbork</field>
+                    <field name="postal_code">54-144</field>
+                    <field name="street">Maczka Stanisława</field>
+                    <field name="flat_number">05</field>
+                </row><row>
+                    <field name="id">79</field>
+                    <field name="city">Rynarzewo</field>
+                    <field name="postal_code">65-589</field>
+                    <field name="street">Grabowa</field>
+                    <field name="flat_number">03/82</field>
+                </row><row>
+                    <field name="id">80</field>
+                    <field name="city">Świdwin</field>
+                    <field name="postal_code">33-354</field>
+                    <field name="street">Puszkina Aleksandra</field>
+                    <field name="flat_number">49/16</field>
+                </row><row>
+                    <field name="id">81</field>
+                    <field name="city">Wola Kiedrzyńska</field>
+                    <field name="postal_code">56-626</field>
+                    <field name="street">Kaliska</field>
+                    <field name="flat_number">16A/10</field>
+                </row><row>
+                    <field name="id">82</field>
+                    <field name="city">Leszno</field>
+                    <field name="postal_code">45-090</field>
+                    <field name="street">Piastowskie Os.</field>
+                    <field name="flat_number">73A/74</field>
+                </row><row>
+                    <field name="id">83</field>
+                    <field name="city">Gorlice</field>
+                    <field name="postal_code">79-961</field>
+                    <field name="street">1 Maja</field>
+                    <field name="flat_number">71A/99</field>
+                </row><row>
+                    <field name="id">84</field>
+                    <field name="city">Starachowice</field>
+                    <field name="postal_code">22-197</field>
+                    <field name="street">Przyjaźni</field>
+                    <field name="flat_number">56A</field>
+                </row><row>
+                    <field name="id">85</field>
+                    <field name="city">Czeladź</field>
+                    <field name="postal_code">35-374</field>
+                    <field name="street">Stawowa</field>
+                    <field name="flat_number">06A</field>
+                </row><row>
+                    <field name="id">86</field>
+                    <field name="city">Jelenia Góra</field>
+                    <field name="postal_code">60-738</field>
+                    <field name="street">Inżynierska</field>
+                    <field name="flat_number">88</field>
+                </row><row>
+                    <field name="id">87</field>
+                    <field name="city">Sanok</field>
+                    <field name="postal_code">61-319</field>
+                    <field name="street">Studzienna</field>
+                    <field name="flat_number">51/34</field>
+                </row><row>
+                    <field name="id">88</field>
+                    <field name="city">Brodnica</field>
+                    <field name="postal_code">85-491</field>
+                    <field name="street">Piwna</field>
+                    <field name="flat_number">58/01</field>
+                </row><row>
+                    <field name="id">89</field>
+                    <field name="city">Nowe Kramsko</field>
+                    <field name="postal_code">02-132</field>
+                    <field name="street">Zgierska</field>
+                    <field name="flat_number">91/40</field>
+                </row><row>
+                    <field name="id">90</field>
+                    <field name="city">Mikołów</field>
+                    <field name="postal_code">28-937</field>
+                    <field name="street">Kilińskiego Jana</field>
+                    <field name="flat_number">54</field>
+                </row><row>
+                    <field name="id">91</field>
+                    <field name="city">Sosnowiec</field>
+                    <field name="postal_code">40-743</field>
+                    <field name="street">Nowowiejskiego Feliksa</field>
+                    <field name="flat_number">27/15</field>
+                </row><row>
+                    <field name="id">92</field>
+                    <field name="city">Bieruń</field>
+                    <field name="postal_code">71-201</field>
+                    <field name="street">Powstańców Wielkopolskich</field>
+                    <field name="flat_number">74A</field>
+                </row><row>
+                    <field name="id">93</field>
+                    <field name="city">Ciechanów</field>
+                    <field name="postal_code">47-074</field>
+                    <field name="street">Narutowicza Gabriela</field>
+                    <field name="flat_number">38/36</field>
+                </row><row>
+                    <field name="id">94</field>
+                    <field name="city">Racibórz</field>
+                    <field name="postal_code">41-049</field>
+                    <field name="street">Hutnicza</field>
+                    <field name="flat_number">36/75</field>
+                </row><row>
+                    <field name="id">95</field>
+                    <field name="city">Świdwin</field>
+                    <field name="postal_code">96-020</field>
+                    <field name="street">Senatorska</field>
+                    <field name="flat_number">23/88</field>
+                </row><row>
+                    <field name="id">96</field>
+                    <field name="city">Puławy</field>
+                    <field name="postal_code">48-979</field>
+                    <field name="street">Nowa</field>
+                    <field name="flat_number">38A/21</field>
+                </row><row>
+                    <field name="id">97</field>
+                    <field name="city">Skierniewice</field>
+                    <field name="postal_code">83-645</field>
+                    <field name="street">Miarki Karola</field>
+                    <field name="flat_number">69/68</field>
+                </row><row>
+                    <field name="id">98</field>
+                    <field name="city">Płock</field>
+                    <field name="postal_code">88-214</field>
+                    <field name="street">Gagarina Jurija</field>
+                    <field name="flat_number">88A</field>
+                </row><row>
+                    <field name="id">99</field>
+                    <field name="city">Dąbrowa Górnicza</field>
+                    <field name="postal_code">35-984</field>
+                    <field name="street">Żwirowa</field>
+                    <field name="flat_number">29/62</field>
+                </row><row>
+                    <field name="id">100</field>
+                    <field name="city">Czechowice-Dziedzice</field>
+                    <field name="postal_code">24-001</field>
+                    <field name="street">Zwycięstwa</field>
+                    <field name="flat_number">77</field>
+                </row></table_data>
+        <table_data name="size"></table_data>
+        <table_data name="user"></table_data>
+        <table_data name="parcel"></table_data>
+    </database>
+</mysqldump>

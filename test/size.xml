@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="paczkolab">
+        <table_data name="address"></table_data>
+        <table_data name="size">
+            <row>
+                <field name="id">1</field>
+                <field name="city">S</field>
+                <field name="price">10</field>
+            </row>
+            <row>
+                <field name="id">2</field>
+                <field name="city">M</field>
+                <field name="price">20</field>
+            </row>
+            <row>
+                <field name="id">3</field>
+                <field name="city">L</field>
+                <field name="price">30</field>
+            </row>
+            <row>
+                <field name="id">4</field>
+                <field name="city">XL</field>
+                <field name="price">40</field>
+            </row>
+        </table_data>
+        <table_data name="user"></table_data>
+        <table_data name="parcel"></table_data>
+    </database>
+</mysqldump>

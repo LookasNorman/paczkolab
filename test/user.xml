@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="paczkolab">
+        <table_data name="address"><row>
+                    <field name="id">1</field>
+                    <field name="city">Koszwały</field>
+                    <field name="postal_code">06-250</field>
+                    <field name="street">Dąbrowszczaków</field>
+                    <field name="flat_number">65A/23</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="city">Tarnobrzeg</field>
+                    <field name="postal_code">12-887</field>
+                    <field name="street">Zgierska</field>
+                    <field name="flat_number">80A/56</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="city">Jastrzębie</field>
+                    <field name="postal_code">99-753</field>
+                    <field name="street">Górnośląska</field>
+                    <field name="flat_number">93</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="city">Ostrzeszów</field>
+                    <field name="postal_code">30-202</field>
+                    <field name="street">Grzybowa</field>
+                    <field name="flat_number">03/25</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="city">Krępiec</field>
+                    <field name="postal_code">14-501</field>
+                    <field name="street">Złota</field>
+                    <field name="flat_number">01A/67</field>
+                </row></table_data>
+        <table_data name="size"></table_data>
+        <table_data name="user"><row>
+                    <field name="id">1</field>
+                    <field name="name">Marta</field>
+                    <field name="surname">Szulc</field>
+                    <field name="credits">83</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="name">Łukasz</field>
+                    <field name="surname">Sokołowska</field>
+                    <field name="credits">167</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="name">Krzysztof</field>
+                    <field name="surname">Sikora</field>
+                    <field name="credits">995</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="name">Kajetan</field>
+                    <field name="surname">Witkowski</field>
+                    <field name="credits">632</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="name">Kazimierz</field>
+                    <field name="surname">Stępień</field>
+                    <field name="credits">430</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">6</field>
+                    <field name="name">Barbara</field>
+                    <field name="surname">Wojciechowska</field>
+                    <field name="credits">397</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">7</field>
+                    <field name="name">Marek</field>
+                    <field name="surname">Baranowski</field>
+                    <field name="credits">604</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">8</field>
+                    <field name="name">Emilia</field>
+                    <field name="surname">Ostrowska</field>
+                    <field name="credits">584</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">9</field>
+                    <field name="name">Laura</field>
+                    <field name="surname">Pawlak</field>
+                    <field name="credits">585</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">10</field>
+                    <field name="name">Lena</field>
+                    <field name="surname">Makowski</field>
+                    <field name="credits">893</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">11</field>
+                    <field name="name">Hanna</field>
+                    <field name="surname">Wójcik</field>
+                    <field name="credits">795</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">12</field>
+                    <field name="name">Marcin</field>
+                    <field name="surname">Przybylska</field>
+                    <field name="credits">551</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">13</field>
+                    <field name="name">Nicole</field>
+                    <field name="surname">Wójcik</field>
+                    <field name="credits">982</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">14</field>
+                    <field name="name">Olgierd</field>
+                    <field name="surname">Dudek</field>
+                    <field name="credits">285</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">15</field>
+                    <field name="name">Filip</field>
+                    <field name="surname">Włodarczyk</field>
+                    <field name="credits">214</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">16</field>
+                    <field name="name">Leon</field>
+                    <field name="surname">Urbańska</field>
+                    <field name="credits">378</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">17</field>
+                    <field name="name">Borys</field>
+                    <field name="surname">Zając</field>
+                    <field name="credits">492</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">18</field>
+                    <field name="name">Leonard</field>
+                    <field name="surname">Olszewski</field>
+                    <field name="credits">326</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">19</field>
+                    <field name="name">Matylda</field>
+                    <field name="surname">Król</field>
+                    <field name="credits">480</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">20</field>
+                    <field name="name">Ada</field>
+                    <field name="surname">Grabowska</field>
+                    <field name="credits">332</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">21</field>
+                    <field name="name">Tadeusz</field>
+                    <field name="surname">Dąbrowska</field>
+                    <field name="credits">30</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">22</field>
+                    <field name="name">Olaf</field>
+                    <field name="surname">Makowska</field>
+                    <field name="credits">835</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">23</field>
+                    <field name="name">Arkadiusz</field>
+                    <field name="surname">Pietrzak</field>
+                    <field name="credits">451</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">24</field>
+                    <field name="name">Norbert</field>
+                    <field name="surname">Szewczyk</field>
+                    <field name="credits">962</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">25</field>
+                    <field name="name">Alex</field>
+                    <field name="surname">Szulc</field>
+                    <field name="credits">194</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">26</field>
+                    <field name="name">Alan</field>
+                    <field name="surname">Kalinowski</field>
+                    <field name="credits">312</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">27</field>
+                    <field name="name">Barbara</field>
+                    <field name="surname">Wilk</field>
+                    <field name="credits">148</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">28</field>
+                    <field name="name">Natalia</field>
+                    <field name="surname">Kamiński</field>
+                    <field name="credits">928</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">29</field>
+                    <field name="name">Anastazja</field>
+                    <field name="surname">Sikorski</field>
+                    <field name="credits">220</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">30</field>
+                    <field name="name">Roksana</field>
+                    <field name="surname">Michalak</field>
+                    <field name="credits">455</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">31</field>
+                    <field name="name">Ksawery</field>
+                    <field name="surname">Makowska</field>
+                    <field name="credits">218</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">32</field>
+                    <field name="name">Aleksander</field>
+                    <field name="surname">Majewski</field>
+                    <field name="credits">591</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">33</field>
+                    <field name="name">Aniela</field>
+                    <field name="surname">Piotrowski</field>
+                    <field name="credits">936</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">34</field>
+                    <field name="name">Blanka</field>
+                    <field name="surname">Lis</field>
+                    <field name="credits">939</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">35</field>
+                    <field name="name">Ida</field>
+                    <field name="surname">Sikorska</field>
+                    <field name="credits">51</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">36</field>
+                    <field name="name">Ryszard</field>
+                    <field name="surname">Przybylski</field>
+                    <field name="credits">531</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">37</field>
+                    <field name="name">Tadeusz</field>
+                    <field name="surname">Witkowski</field>
+                    <field name="credits">171</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">38</field>
+                    <field name="name">Gabriela</field>
+                    <field name="surname">Pawlak</field>
+                    <field name="credits">489</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">39</field>
+                    <field name="name">Liliana</field>
+                    <field name="surname">Czerwińska</field>
+                    <field name="credits">264</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">40</field>
+                    <field name="name">Bianka</field>
+                    <field name="surname">Krawczyk</field>
+                    <field name="credits">688</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">41</field>
+                    <field name="name">Janina</field>
+                    <field name="surname">Woźniak</field>
+                    <field name="credits">107</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">42</field>
+                    <field name="name">Paulina</field>
+                    <field name="surname">Kowalska</field>
+                    <field name="credits">849</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">43</field>
+                    <field name="name">Konrad</field>
+                    <field name="surname">Sokołowski</field>
+                    <field name="credits">135</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">44</field>
+                    <field name="name">Grzegorz</field>
+                    <field name="surname">Wojciechowski</field>
+                    <field name="credits">877</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">45</field>
+                    <field name="name">Maks</field>
+                    <field name="surname">Majewska</field>
+                    <field name="credits">534</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">46</field>
+                    <field name="name">Julia</field>
+                    <field name="surname">Chmielewska</field>
+                    <field name="credits">758</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">47</field>
+                    <field name="name">Dariusz</field>
+                    <field name="surname">Sadowski</field>
+                    <field name="credits">549</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">48</field>
+                    <field name="name">Jędrzej</field>
+                    <field name="surname">Andrzejewski</field>
+                    <field name="credits">549</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">49</field>
+                    <field name="name">Dorota</field>
+                    <field name="surname">Wasilewski</field>
+                    <field name="credits">876</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">50</field>
+                    <field name="name">Stefan</field>
+                    <field name="surname">Andrzejewski</field>
+                    <field name="credits">321</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">51</field>
+                    <field name="name">Daria</field>
+                    <field name="surname">Wróbel</field>
+                    <field name="credits">457</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">52</field>
+                    <field name="name">Hanna</field>
+                    <field name="surname">Głowacka</field>
+                    <field name="credits">774</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">53</field>
+                    <field name="name">Nikola</field>
+                    <field name="surname">Kozłowska</field>
+                    <field name="credits">546</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">54</field>
+                    <field name="name">Adam</field>
+                    <field name="surname">Olszewska</field>
+                    <field name="credits">998</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">55</field>
+                    <field name="name">Albert</field>
+                    <field name="surname">Makowski</field>
+                    <field name="credits">653</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">56</field>
+                    <field name="name">Nikodem</field>
+                    <field name="surname">Lis</field>
+                    <field name="credits">355</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">57</field>
+                    <field name="name">Krzysztof</field>
+                    <field name="surname">Cieślak</field>
+                    <field name="credits">814</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">58</field>
+                    <field name="name">Franciszek</field>
+                    <field name="surname">Borowska</field>
+                    <field name="credits">875</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">59</field>
+                    <field name="name">Angelika</field>
+                    <field name="surname">Sikora</field>
+                    <field name="credits">340</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">60</field>
+                    <field name="name">Konstanty</field>
+                    <field name="surname">Makowski</field>
+                    <field name="credits">231</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">61</field>
+                    <field name="name">Blanka</field>
+                    <field name="surname">Andrzejewski</field>
+                    <field name="credits">828</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">62</field>
+                    <field name="name">Tola</field>
+                    <field name="surname">Sikora</field>
+                    <field name="credits">362</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">63</field>
+                    <field name="name">Hanna</field>
+                    <field name="surname">Jasiński</field>
+                    <field name="credits">434</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">64</field>
+                    <field name="name">Wiktoria</field>
+                    <field name="surname">Witkowska</field>
+                    <field name="credits">280</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">65</field>
+                    <field name="name">Sonia</field>
+                    <field name="surname">Urbański</field>
+                    <field name="credits">116</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">66</field>
+                    <field name="name">Oliwier</field>
+                    <field name="surname">Kozłowska</field>
+                    <field name="credits">476</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">67</field>
+                    <field name="name">Jacek</field>
+                    <field name="surname">Pietrzak</field>
+                    <field name="credits">72</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">68</field>
+                    <field name="name">Cezary</field>
+                    <field name="surname">Piotrowski</field>
+                    <field name="credits">648</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">69</field>
+                    <field name="name">Lena</field>
+                    <field name="surname">Wójcik</field>
+                    <field name="credits">409</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">70</field>
+                    <field name="name">Robert</field>
+                    <field name="surname">Wiśniewska</field>
+                    <field name="credits">354</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">71</field>
+                    <field name="name">Zuzanna</field>
+                    <field name="surname">Andrzejewska</field>
+                    <field name="credits">510</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">72</field>
+                    <field name="name">Urszula</field>
+                    <field name="surname">Piotrowski</field>
+                    <field name="credits">180</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">73</field>
+                    <field name="name">Malwina</field>
+                    <field name="surname">Malinowska</field>
+                    <field name="credits">876</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">74</field>
+                    <field name="name">Stanisław</field>
+                    <field name="surname">Sadowski</field>
+                    <field name="credits">396</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">75</field>
+                    <field name="name">Laura</field>
+                    <field name="surname">Sikorski</field>
+                    <field name="credits">482</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">76</field>
+                    <field name="name">Apolonia</field>
+                    <field name="surname">Walczak</field>
+                    <field name="credits">458</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">77</field>
+                    <field name="name">Borys</field>
+                    <field name="surname">Baranowska</field>
+                    <field name="credits">714</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">78</field>
+                    <field name="name">Aleksander</field>
+                    <field name="surname">Sawicki</field>
+                    <field name="credits">910</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">79</field>
+                    <field name="name">Natan</field>
+                    <field name="surname">Borkowska</field>
+                    <field name="credits">67</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">80</field>
+                    <field name="name">Antonina</field>
+                    <field name="surname">Krawczyk</field>
+                    <field name="credits">222</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">81</field>
+                    <field name="name">Zofia</field>
+                    <field name="surname">Czerwiński</field>
+                    <field name="credits">303</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">82</field>
+                    <field name="name">Adrian</field>
+                    <field name="surname">Sadowski</field>
+                    <field name="credits">238</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">83</field>
+                    <field name="name">Iwo</field>
+                    <field name="surname">Kwiatkowska</field>
+                    <field name="credits">830</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">84</field>
+                    <field name="name">Ernest</field>
+                    <field name="surname">Krawczyk</field>
+                    <field name="credits">549</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">85</field>
+                    <field name="name">Bartek</field>
+                    <field name="surname">Brzeziński</field>
+                    <field name="credits">493</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">86</field>
+                    <field name="name">Aleks</field>
+                    <field name="surname">Krajewski</field>
+                    <field name="credits">147</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">87</field>
+                    <field name="name">Gabriel</field>
+                    <field name="surname">Chmielewski</field>
+                    <field name="credits">805</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">88</field>
+                    <field name="name">Julita</field>
+                    <field name="surname">Głowacki</field>
+                    <field name="credits">768</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">89</field>
+                    <field name="name">Jerzy</field>
+                    <field name="surname">Stępień</field>
+                    <field name="credits">459</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">90</field>
+                    <field name="name">Barbara</field>
+                    <field name="surname">Pawłowska</field>
+                    <field name="credits">823</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">91</field>
+                    <field name="name">Agata</field>
+                    <field name="surname">Gajewski</field>
+                    <field name="credits">344</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">92</field>
+                    <field name="name">Maksymilian</field>
+                    <field name="surname">Szulc</field>
+                    <field name="credits">663</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">93</field>
+                    <field name="name">Jakub</field>
+                    <field name="surname">Czarnecki</field>
+                    <field name="credits">765</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">94</field>
+                    <field name="name">Kajetan</field>
+                    <field name="surname">Duda</field>
+                    <field name="credits">401</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">95</field>
+                    <field name="name">Ryszard</field>
+                    <field name="surname">Nowak</field>
+                    <field name="credits">580</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">96</field>
+                    <field name="name">Norbert</field>
+                    <field name="surname">Pawłowski</field>
+                    <field name="credits">954</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">97</field>
+                    <field name="name">Daniel</field>
+                    <field name="surname">Wróbel</field>
+                    <field name="credits">892</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">98</field>
+                    <field name="name">Aniela</field>
+                    <field name="surname">Pawłowska</field>
+                    <field name="credits">694</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">99</field>
+                    <field name="name">Aurelia</field>
+                    <field name="surname">Baran</field>
+                    <field name="credits">944</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">100</field>
+                    <field name="name">Julianna</field>
+                    <field name="surname">Szewczyk</field>
+                    <field name="credits">855</field>
+                    <field name="address_id">5</field>
+                </row></table_data>
+        <table_data name="parcel"></table_data>
+    </database>
+</mysqldump>

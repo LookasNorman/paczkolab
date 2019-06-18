@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="paczkolab">
+        <table_data name="address"><row>
+                    <field name="id">1</field>
+                    <field name="city">Szteklin</field>
+                    <field name="postal_code">26-100</field>
+                    <field name="street">Miła</field>
+                    <field name="flat_number">37</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="city">Kielce</field>
+                    <field name="postal_code">41-526</field>
+                    <field name="street">Batorego Stefana</field>
+                    <field name="flat_number">13/13</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="city">Świętochłowice</field>
+                    <field name="postal_code">73-539</field>
+                    <field name="street">Porzeczkowa</field>
+                    <field name="flat_number">38A</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="city">Olkusz</field>
+                    <field name="postal_code">26-875</field>
+                    <field name="street">Siemiradzkiego Henryka</field>
+                    <field name="flat_number">96A</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="city">Chełm</field>
+                    <field name="postal_code">16-777</field>
+                    <field name="street">Batorego Stefana</field>
+                    <field name="flat_number">24A</field>
+                </row></table_data>
+        <table_data name="size">
+            <row>
+                <field name="id">1</field>
+                <field name="city">S</field>
+                <field name="price">10</field>
+            </row>
+            <row>
+                <field name="id">2</field>
+                <field name="city">M</field>
+                <field name="price">20</field>
+            </row>
+            <row>
+                <field name="id">3</field>
+                <field name="city">L</field>
+                <field name="price">30</field>
+            </row>
+            <row>
+                <field name="id">4</field>
+                <field name="city">XL</field>
+                <field name="price">40</field>
+            </row>
+        </table_data>
+        <table_data name="user"><row>
+                    <field name="id">1</field>
+                    <field name="name">Wiktor</field>
+                    <field name="surname">Makowska</field>
+                    <field name="credits">64</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="name">Natan</field>
+                    <field name="surname">Włodarczyk</field>
+                    <field name="credits">584</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="name">Rozalia</field>
+                    <field name="surname">Kwiatkowski</field>
+                    <field name="credits">930</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="name">Julianna</field>
+                    <field name="surname">Cieślak</field>
+                    <field name="credits">457</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="name">Stefan</field>
+                    <field name="surname">Jankowska</field>
+                    <field name="credits">36</field>
+                    <field name="address_id">5</field>
+                </row></table_data>
+        <table_data name="parcel"><row>
+                    <field name="id">1</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">2</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">3</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">4</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">5</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">6</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">7</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">8</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">9</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">10</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">11</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">12</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">13</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">14</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">15</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">16</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">17</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">18</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">19</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">20</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">21</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">22</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">23</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">24</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">25</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">26</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">27</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">28</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">29</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">30</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">31</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">32</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">33</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">34</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">35</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">36</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">37</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">38</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">39</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">40</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">41</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">42</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">43</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">44</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">45</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">46</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">47</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">48</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">49</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">50</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">51</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">52</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">53</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">54</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">55</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">56</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">57</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">58</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">59</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">60</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">61</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">62</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">63</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">64</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">65</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">66</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">67</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">68</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">69</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">70</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">71</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">72</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">73</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">74</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">75</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">76</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">77</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">78</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">79</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">80</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">81</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">82</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">83</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">84</field>
+                    <field name="user_id">4</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">85</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">86</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">3</field>
+                </row><row>
+                    <field name="id">87</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">88</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">89</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">90</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">91</field>
+                    <field name="user_id">3</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">92</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">93</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">94</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">4</field>
+                </row><row>
+                    <field name="id">95</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row><row>
+                    <field name="id">96</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">97</field>
+                    <field name="user_id">2</field>
+                    <field name="size_id">4</field>
+                    <field name="address_id">1</field>
+                </row><row>
+                    <field name="id">98</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">2</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">99</field>
+                    <field name="user_id">1</field>
+                    <field name="size_id">3</field>
+                    <field name="address_id">2</field>
+                </row><row>
+                    <field name="id">100</field>
+                    <field name="user_id">5</field>
+                    <field name="size_id">1</field>
+                    <field name="address_id">5</field>
+                </row></table_data>
+    </database>
+</mysqldump>
