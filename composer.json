@@ -12,6 +12,8 @@
     },
 
     "autoload": {
-        "classmap": ["Classes"]
+        "classmap": ["class",
+        "class/database",
+        "class/interface"]
     }
 }

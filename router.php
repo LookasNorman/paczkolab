@@ -1,16 +1,5 @@
 <?php
 
-//Load DB class
-use DBmysql;
-//parsing URL
-$uriPathInfo = $_SERVER['REQUEST_URI'];
-//explode path info
-$path = explode('/', $uriPathInfo);
-$requestClass = $path[1];
-//class name
-$requestClass = preg_replace('#[^0-9a-zA-Z]#', '', $requestClass);//remove all non alfanum chars from request
-$className = ucfirst(strtolower($requestClass));
-
 //Load DB config
 require (__DIR__ . '/config.php');
 
@@ -19,9 +8,8 @@ $conn = new DBmysql();
 $errorDB = $conn->getError();
 //check if the class parametr is set
 $pathId = isset($path[2]) ? $path[2] : null;
-
 if (!isset($errorDB)) {//process request if no db error
-    include_once __DIR__.'/restEndPoints/'.$className.'.php';
+    include_once __DIR__.'/restEndPoints/Size.php';
 }
 
 header('Content-Type: application/json');//return json header
@@ -31,4 +19,4 @@ if (isset($errorDB)) {
 }
 
 //return the result from DB as json
-echo json_encode($conn->resultSet());
+echo json_encode($response);
