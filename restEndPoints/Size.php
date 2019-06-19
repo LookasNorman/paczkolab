@@ -21,4 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $size->save();
 
     $response = json_decode(json_encode($size));
+} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+    parse_str(file_get_contents("php://input"), $deleteVars);
+    $size = new Size($deleteVars['id']);
+    $size->delete();
 }

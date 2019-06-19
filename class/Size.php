@@ -21,7 +21,16 @@ class Size implements Action, JsonSerializable
 
     public function delete()
     {
-        // TODO: Implement delete() method.
+        if ($this->id > 0) {
+            $dbConn = new DBmysql();
+
+            $query = "DELETE FROM Size WHERE id=:id";
+
+            $dbConn->query($query);
+            $dbConn->bind('id', $this->id);
+            $dbConn->execute();
+            return $dbConn->rowCount() > 0;
+        }
     }
 
     public function save()
