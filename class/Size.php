@@ -81,13 +81,13 @@ class Size implements Action, JsonSerializable
     public static function loadAll()
     {
         $dbConn = new DBmysql();
-        $query = "SELECT price, size, id FROM Size";
+        $query = "SELECT * FROM Size";
 
         $dbConn->query($query);
         $sizes = $dbConn->resultSet();
         $sizesList = [];
         foreach ($sizes as $dbSize) {
-            $size = new Size($dbConn);
+            $size = new Size();
             $size->id = $dbSize['id'];
             $size->size = $dbSize['size'];
             $size->price = $dbSize['price'];
@@ -103,9 +103,9 @@ class Size implements Action, JsonSerializable
     public function jsonSerialize()
     {
         return [
-            'id'      => $this->id,
-            'size'    => $this->size,
-            'price'   => $this->price,
+            'id' => $this->id,
+            'size' => $this->size,
+            'price' => $this->price,
 
         ];
     }
