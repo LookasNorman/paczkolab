@@ -42,16 +42,17 @@ class Size implements Action, JsonSerializable
 //            );
         } else {
             $dbConn = new DBmysql();
-            $param = [
-                'price' => $this->price,
-                'size' => $this->size
-            ];
+
             $query = "INSERT INTO Size SET price=:price, size=:size";
 
-            $stmt = $dbConn->query($query);
-            $stmt->execute($param);
-            $stmt->lastInsertId();
+            $dbConn->query($query);
+            $dbConn->bind('size', $this->size);
+            $dbConn->bind('price', $this->price);
+            $dbConn->execute();
+            $id = $dbConn->lastInsertId();
+            $this->id = $id;
         }
+
         return $this;
     }
 
