@@ -61,7 +61,7 @@ class DBmysql implements Database
      */
     public function query($query)
     {
-        return $this->stmt = $this->dbh->prepare($query);
+        $this->stmt = $this->dbh->prepare($query);
     }
 
     /**

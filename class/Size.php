@@ -73,18 +73,16 @@ class Size implements Action, JsonSerializable
     public static function loadAll()
     {
         $dbConn = new DBmysql();
-        $query = "SELECT * FROM Size";
+        $query = "SELECT price, size, id FROM Size";
 
-        $stmt = $dbConn->query($query);
-        $stmt->execute();
-
-        $sizes = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $dbConn->query($query);
+        $sizes = $dbConn->resultSet();
         $sizesList = [];
         foreach ($sizes as $dbSize) {
             $size = new Size($dbConn);
-            $size->id = $dbSize->id;
-            $size->size = $dbSize->size;
-            $size->price = $dbSize->price;
+            $size->id = $dbSize['id'];
+            $size->size = $dbSize['size'];
+            $size->price = $dbSize['price'];
 
             $sizesList [] = $size;
         }
