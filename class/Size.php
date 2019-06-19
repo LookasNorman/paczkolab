@@ -12,11 +12,9 @@ class Size implements Action, JsonSerializable
      * Size constructor.
      * Set id to -1, size and price to null
      */
-    public function __construct()
+    public function __construct($id = -1)
     {
-
-
-        $this->id = -1;
+        $this->id = $id;
         $this->size = '';
         $this->price = '';
     }
@@ -29,17 +27,17 @@ class Size implements Action, JsonSerializable
     public function save()
     {
         if ($this->id > 0) {
-            //update
-//            $sql = "UPDATE books SET title=:title, description=:description, author_id=:author_id WHERE id=:id";
-//            $stmt = self::$db->prepare($sql);
-//            $stmt->execute(
-//                [
-//                    'id'          => $this->id,
-//                    'title'       => $this->title,
-//                    'description' => $this->description,
-//                    'author_id'   => $this->author_id,
-//                ]
-//            );
+            $dbConn = new DBmysql();
+
+            $query = "UPDATE Size SET price=:price, size=:size WHERE id=:id";
+
+            $dbConn->query($query);
+            $dbConn->bind('id', $this->id);
+            $dbConn->bind('size', $this->size);
+            $dbConn->bind('price', $this->price);
+            $dbConn->execute();
+            $id = $dbConn->lastInsertId();
+            $this->id = $id;
         } else {
             $dbConn = new DBmysql();
 
