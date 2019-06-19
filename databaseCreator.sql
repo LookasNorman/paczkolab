@@ -4,7 +4,7 @@ USE paczkolab;
 
 CREATE TABLE Size (
                       id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                      size varchar(2) NOT NULL,
+                      size varchar(5) NOT NULL,
                       price decimal(7,2)
 );
 CREATE TABLE Address (
