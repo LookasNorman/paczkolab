@@ -36,10 +36,10 @@ class DBmysql implements Database
      */
     public function __construct($pdo = null)
     {
-        if ($pdo != null){
+        if ($pdo != null) {
             $this->dbh = $pdo;
-        }else {
-        
+        } else {
+
             $dbid = 'mysql:host=' . DB_SERVER_NAME . ';dbname=' . DB_BASE_NAME . ';charset=utf8';
             $options = array(PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
             try {
@@ -98,10 +98,10 @@ class DBmysql implements Database
 
     /**
      * Method executes object statement
-     *
+     * @param array $input_parameters [optional]
      * @return mixed
      */
-    public function execute()
+    public function execute($input_parameters = null)
     {
         return $this->stmt->execute();
     }

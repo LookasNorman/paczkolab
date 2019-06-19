@@ -12,9 +12,9 @@ class Size implements Action, JsonSerializable
      * Size constructor.
      * Set id to -1, size and price to null
      */
-    public function __construct(DBmysql $dbConn)
+    public function __construct()
     {
-        self::$dbConn = $dbConn;
+
 
         $this->id = -1;
         $this->size = '';
@@ -28,12 +28,36 @@ class Size implements Action, JsonSerializable
 
     public function save()
     {
-        // TODO: Implement save() method.
+        if ($this->id > 0) {
+            //update
+//            $sql = "UPDATE books SET title=:title, description=:description, author_id=:author_id WHERE id=:id";
+//            $stmt = self::$db->prepare($sql);
+//            $stmt->execute(
+//                [
+//                    'id'          => $this->id,
+//                    'title'       => $this->title,
+//                    'description' => $this->description,
+//                    'author_id'   => $this->author_id,
+//                ]
+//            );
+        } else {
+            $dbConn = new DBmysql();
+            $param = [
+                'price' => $this->price,
+                'size' => $this->size
+            ];
+            $query = "INSERT INTO Size SET price=:price, size=:size";
+
+            $stmt = $dbConn->query($query);
+            $stmt->execute($param);
+            $stmt->lastInsertId();
+        }
+        return $this;
     }
 
     public function update()
     {
-        // TODO: Implement update() method.
+        // TODO: Implement save() method.
     }
 
     public static function load($id = null)
@@ -43,7 +67,7 @@ class Size implements Action, JsonSerializable
 
     public static function setDb(Database $db)
     {
-        // TODO: Implement setDb() method.
+        self::$dbConn = $db;
     }
 
     public static function loadAll()
