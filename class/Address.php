@@ -26,7 +26,34 @@ class Address implements Action, JsonSerializable
 
     public function save()
     {
-        // TODO: Implement save() method.
+        if ($this->id > 0) {
+            $dbConn = new DBmysql();
+
+            $query = "UPDATE Address SET city=:city, code=:code, street=:street, flat=:flat WHERE id=:id";
+
+            $dbConn->query($query);
+            $dbConn->bind('id', $this->id);
+            $dbConn->bind('code', $this->code);
+            $dbConn->bind('city', $this->city);
+            $dbConn->bind('street', $this->street);
+            $dbConn->bind('flat', $this->flat);
+            $dbConn->execute();
+            $id = $dbConn->lastInsertId();
+            $this->id = $id;
+        } else {
+            $dbConn = new DBmysql();
+            $query = "INSERT INTO Address SET city=:city, code=:code, street=:street, flat=:flat";
+            $dbConn->query($query);
+            $dbConn->bind('city', $this->city);
+            $dbConn->bind('code', $this->code);
+            $dbConn->bind('street', $this->street);
+            $dbConn->bind('flat', $this->flat);
+            $dbConn->execute();
+            $id = $dbConn->lastInsertId();
+            $this->id = $id;
+        }
+
+        return $this;
     }
 
     public function update()
@@ -36,12 +63,39 @@ class Address implements Action, JsonSerializable
 
     public function delete()
     {
-        // TODO: Implement delete() method.
+        if ($this->id > 0) {
+            $dbConn = new DBmysql();
+
+            $query = "DELETE FROM Address WHERE id=:id";
+
+            $dbConn->query($query);
+            $dbConn->bind('id', $this->id);
+            $dbConn->execute();
+            return $dbConn->rowCount() > 0;
+        }
     }
 
     public static function load($id = null)
     {
-        // TODO: Implement load() method.
+        $dbConn = new DBmysql();
+        $query = "SELECT * FROM Address WHERE id=:id";
+
+        $dbConn->query($query);
+        $dbConn->bind('id', $id);
+        $addresses = $dbConn->resultSet();
+        $addressesList = [];
+        foreach ($addresses as $dbAddress) {
+            $address = new Address();
+            $address->id = $dbAddress['id'];
+            $address->city = $dbAddress['city'];
+            $address->code = $dbAddress['code'];
+            $address->street = $dbAddress['street'];
+            $address->flat = $dbAddress['flat'];
+
+            $addressesList [] = $address;
+        }
+
+        return $addressesList;
     }
 
     public static function loadAll()
@@ -56,9 +110,9 @@ class Address implements Action, JsonSerializable
             $address = new Address();
             $address->id = $dbAddress['id'];
             $address->city = $dbAddress['city'];
-            $address->code = $dbAddress['postal_code'];
+            $address->code = $dbAddress['code'];
             $address->street = $dbAddress['street'];
-            $address->flat = $dbAddress['flat_number'];
+            $address->flat = $dbAddress['flat'];
 
             $addressesList [] = $address;
         }

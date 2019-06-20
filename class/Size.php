@@ -70,7 +70,24 @@ class Size implements Action, JsonSerializable
 
     public static function load($id = null)
     {
-        // TODO: Implement load() method.
+        $dbConn = new DBmysql();
+        $query = "SELECT * FROM Size WHERE id=:id";
+
+        $dbConn->query($query);
+        $dbConn->bind('id', $id);
+        $sizes = $dbConn->resultSet();
+        $sizesList = [];
+        foreach ($sizes as $dbSize) {
+            $size = new Size();
+            $size->id = $dbSize['id'];
+            $size->size = $dbSize['size'];
+            $size->price = $dbSize['price'];
+
+            $sizesList [] = $size;
+        }
+
+        return $sizesList;
+
     }
 
     public static function setDb(Database $db)
