@@ -27,8 +27,9 @@ $(document).ready(function() {
             var tr = $('<tr>'),
                 tdId = $('<td>', {class: "id"}),
                 tdAddress = $('<td>', {class: "address"}),
-                tdName = $('<td>', {class: "name"}),
-                tdUserAddress = $('<td>', {class: "address"}),
+                tdSender = $('<td>', {class: "sender"}),
+                tdName = $('<p>', {class: "name"}),
+                tdUserAddress = $('<p>', {class: "userAddress hide"}),
                 tdSize = $('<td>', {class: "size"}),
                 tdPrice = $('<td>', {class: "price"}),
                 tdAction = $('<td>', {class: "action"}),
@@ -41,7 +42,8 @@ $(document).ready(function() {
                 inputSubmit = $('<input>', {type: "submit"});
 
             // Create table element
-            tr.append(tdId, tdAddress, tdName, tdUserAddress, tdSize, tdPrice, tdAction);
+            tr.append(tdId, tdAddress, tdSender, tdSize, tdPrice, tdAction);
+            tdSender.append(tdName, tdUserAddress);
             tdAction.append(actionDelete, actionForm);
             actionForm.append(inputAddress, inputName, inputSize, inputPrice, inputSubmit);
             viewParcel.append(tr);
@@ -161,5 +163,11 @@ $(document).ready(function() {
 
             });
         });
+
+        //Show sender address
+        viewParcel.on('click', '.name', function () {
+            var userAddress = $(this).next('p');
+            userAddress.toggleClass('hide');
+        })
     }
 });
