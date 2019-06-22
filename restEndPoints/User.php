@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($method === 'GET') {
     if(!$pathId){
         $users = User::loadAll();
     } else {
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     foreach ($users as $user) {
         $response [] = $user;
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+} elseif ($method === 'PATCH') {
     parse_str(file_get_contents("php://input"), $patchVars);
     $user = new User($patchVars['id']);
     $user->setName($patchVars['name']);
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $user->save();
 
     $response = $user;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+} elseif ($method === 'POST') {
     $user = new User();
     $user->setName($_POST['name']);
     $user->setSurname($_POST['surname']);
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $user->save();
 
     $response = $user;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} elseif ($method === 'DELETE') {
     parse_str(file_get_contents("php://input"), $deleteVars);
     $user = new User($deleteVars['id']);
     $user->delete();

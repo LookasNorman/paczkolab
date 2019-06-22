@@ -1,12 +1,12 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($method === 'GET') {
     $parcels = Parcel::loadAll();
     $response = [];
     foreach ($parcels as $parcel) {
         $response [] = $parcel;
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+} elseif ($method === 'PATCH') {
     parse_str(file_get_contents("php://input"), $patchVars);
     $parcel = new Parcel($patchVars['id']);
     $parcel->setUserId($patchVars['user_id']);
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $parcel->save();
 
     $response = $parcel;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+} elseif ($method === 'POST') {
     $parcel = new Parcel();
     $parcel->setUserId($_POST['user_id']);
     $parcel->setSizeId($_POST['size_id']);
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $parcel->save();
 
     $response = $parcel;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} elseif ($method === 'DELETE') {
     parse_str(file_get_contents("php://input"), $deleteVars);
     $parcel = new Parcel($deleteVars['id']);
     $parcel->delete();

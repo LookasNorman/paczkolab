@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($method === 'GET') {
     if (!$pathId) {
         $addresses = Address::loadAll();
     } else {
@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $response [] = $address;
     }
 
-} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+} elseif ($method === 'PATCH') {
     parse_str(file_get_contents("php://input"), $patchVars);
     $address = new Address($patchVars['id']);
     $address->setCity($patchVars['city']);
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $address->save();
 
     $response = $address;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+} elseif ($method === 'POST') {
     $address = new Address();
     $address->setCity($_POST['city']);
     $address->setCode($_POST['code']);
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $address->save();
 
     $response = $address;
-} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} elseif ($method === 'DELETE') {
     parse_str(file_get_contents("php://input"), $deleteVars);
     $address = new Address($deleteVars['id']);
     $address->delete();

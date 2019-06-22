@@ -1,35 +1,32 @@
 <?php
-
+require_once __DIR__ . '/vendor/autoload.php';
 //Load DB config
 require (__DIR__ . '/config.php');
 //connect to DB
 $conn = new DBmysql();
 $errorDB = $conn->getError();
-//check if the class parametr is set
-//if (!isset($errorDB)) {//process request if no db error
-//    include_once __DIR__.'/restEndPoints/Size.php';
-//}
 
-//$_SERVER['REQUEST_METHOD'] = 'POST';
-//get class name from URI
-$uriPathInfo = $_SERVER['REQUEST_URI'];
-//explode path info
-$path = explode('/', $uriPathInfo);
-$requestClass = $path[2];
+//new router class
+$router = new Router();
+//get request method
+$method = $router->getRequestMethod();
 
-//load class file
-$requestClass = preg_replace('#[^0-9a-zA-Z]#', '', $requestClass);//remove all non alfanum chars from request
-$className = ucfirst(strtolower($requestClass));
+//get class name and path id
+$classNamePathId = $router->getClassAndId();
 
-$classFile = __DIR__.'/class/'.$className.'.php';
-require_once $classFile;
-
-######### END DYNAMIC LOAD #########
-
-$pathId = isset($path[3]) ? $path[3] : null;
-if (!isset($response['error'])) {//process request if no db error
-    include_once __DIR__.'/restEndPoints/'.$className.'.php';
+//check if class name is set
+if ($classNamePathId['className']) {
+    $classFile = __DIR__.'/class/'.$classNamePathId['className'].'.php';
+    require_once $classFile;
 }
+
+//check if path is set
+$pathId = $classNamePathId['pathId'];
+
+    if (!isset($response['error']) && $classNamePathId['className']) {//process request if no db error
+        include_once __DIR__.'/restEndPoints/'.$classNamePathId['className'].'.php';
+    }
+
 
 header('Content-Type: application/json');//return json header
 
