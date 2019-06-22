@@ -28,6 +28,7 @@ $(document).ready(function() {
                 tdId = $('<td>', {class: "id"}),
                 tdAddress = $('<td>', {class: "address"}),
                 tdName = $('<td>', {class: "name"}),
+                tdUserAddress = $('<td>', {class: "address"}),
                 tdSize = $('<td>', {class: "size"}),
                 tdPrice = $('<td>', {class: "price"}),
                 tdAction = $('<td>', {class: "action"}),
@@ -40,7 +41,7 @@ $(document).ready(function() {
                 inputSubmit = $('<input>', {type: "submit"});
 
             // Create table element
-            tr.append(tdId, tdAddress, tdName, tdSize, tdPrice, tdAction);
+            tr.append(tdId, tdAddress, tdName, tdUserAddress, tdSize, tdPrice, tdAction);
             tdAction.append(actionDelete, actionForm);
             actionForm.append(inputAddress, inputName, inputSize, inputPrice, inputSubmit);
             viewParcel.append(tr);
@@ -74,6 +75,31 @@ $(document).ready(function() {
                 });
             }
 
+            //Insert user address
+            function insertUserAddress(address) {
+                $.each(address, function() {
+                    tdUserAddress.text(this.city + ' ' + this.code + ', ' +  this.street + ' ' + this.flat);
+                });
+            }
+
+            //Get user address
+            function userAddress(user) {
+                $.each(user, function () {
+                    var addressId = this.address_id;
+                    var url = '../../router.php/address/';
+                    $.ajax({
+                        type: 'GET',
+                        url: url + addressId,
+                        contentType: 'application/json',
+                        dataType: 'json'
+                    }).done(function (response) {
+                        insertUserAddress(response);
+                    }).fail(function (response) {
+                        alert( "Wystąpił błąd");
+                    });
+                })
+            }
+
             var userId = this.user_id;
             var url = '../../router.php/user/';
 
@@ -85,6 +111,7 @@ $(document).ready(function() {
                 dataType: 'json'
             }).done(function (response) {
                 insertName(response);
+                userAddress(response);
             }).fail(function (response) {
                 alert( "Wystąpił błąd");
             });
