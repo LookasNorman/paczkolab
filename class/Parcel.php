@@ -3,9 +3,9 @@
 class Parcel implements Action, JsonSerializable
 {
     private $id;
-    private $userId;
+    private $senderId;
     private $sizeId;
-    private $addressId;
+    private $recipientId;
 
     public static $dbConn;
 
@@ -16,9 +16,9 @@ class Parcel implements Action, JsonSerializable
     public function __construct($id = -1)
     {
         $this->id = $id;
-        $this->userId = '';
+        $this->senderId = '';
         $this->sizeId = '';
-        $this->addressId = '';
+        $this->recipientId = '';
     }
 
     public function save()
@@ -26,31 +26,31 @@ class Parcel implements Action, JsonSerializable
         if ($this->id > 0) {
             $dbConn = new DBmysql();
 
-            $query = "UPDATE Parcel SET user_id=:userId, size_id=:sizeId, address_id=:addressId WHERE id=:id";
+            $query = "UPDATE Parcel SET sender_id=:senderId, size_id=:sizeId, recipient_id=:recipientId WHERE id=:id";
 
             $dbConn->query($query);
             $dbConn->bind('id', $this->id);
             $dbConn->bind('sizeId', $this->sizeId);
-            $dbConn->bind('userId', $this->userId);
-            $dbConn->bind('addressId', $this->addressId);
+            $dbConn->bind('senderId', $this->senderId);
+            $dbConn->bind('recipientId', $this->recipientId);
             $dbConn->execute();
             $id = $dbConn->lastInsertId();
             $this->id = $id;
         } else {
             $dbConn = new DBmysql();
 
-            $user = User::load($this->userId);
+            $user = User::load($this->senderId);
             $credits = $user[0]->getCredits();
             $size = Size::load($this->sizeId);
             $price = $size[0]->getPrice();
 //            var_dump($price);
 
             if($credits >= $price) {
-                $query = "INSERT INTO Parcel SET user_id=:userId, size_id=:sizeId, address_id=:addressId";
+                $query = "INSERT INTO Parcel SET sender_id=:senderId``, size_id=:sizeId, recipient_id=:recipientId";
                 $dbConn->query($query);
-                $dbConn->bind('userId', $this->userId);
+                $dbConn->bind('senderId`', $this->senderId);
                 $dbConn->bind('sizeId', $this->sizeId);
-                $dbConn->bind('addressId', $this->addressId);
+                $dbConn->bind('recipientId', $this->recipientId);
                 $dbConn->execute();
                 $id = $dbConn->lastInsertId();
                 $this->id = $id;
@@ -86,9 +86,9 @@ class Parcel implements Action, JsonSerializable
         foreach ($parcels as $dbParcel){
             $parcel = new Parcel();
             $parcel->id = $dbParcel['id'];
-            $parcel->userId = $dbParcel['user_id'];
+            $parcel->senderId = $dbParcel['sender_id'];
             $parcel->sizeId = $dbParcel['size_id'];
-            $parcel->addressId = $dbParcel['address_id'];
+            $parcel->recipientId = $dbParcel['recipient_id'];
 
             $parcelsList [] = $parcel;
         }
@@ -110,9 +110,9 @@ class Parcel implements Action, JsonSerializable
         foreach ($parcels as $dbParcel){
             $parcel = new Parcel();
             $parcel->id = $dbParcel['id'];
-            $parcel->userId = $dbParcel['user_id'];
+            $parcel->senderId = $dbParcel['sender_id'];
             $parcel->sizeId = $dbParcel['size_id'];
-            $parcel->addressId = $dbParcel['address_id'];
+            $parcel->recipientId = $dbParcel['recipient_id'];
 
             $parcelsList [] = $parcel;
         }
@@ -130,8 +130,8 @@ class Parcel implements Action, JsonSerializable
     {
         return [
             'id' => $this->id,
-            'user_id' => $this->userId,
-            'address_id' => $this->addressId,
+            'sender_id' => $this->senderId,
+            'recipient_id' => $this->recipientId,
             'size_id' => $this->sizeId
         ];
     }
@@ -148,17 +148,17 @@ class Parcel implements Action, JsonSerializable
     /**
      * @return mixed
      */
-    public function getUserId()
+    public function getSenderId()
     {
-        return $this->userId;
+        return $this->senderId;
     }
 
     /**
      * @param mixed $userId
      */
-    public function setUserId($userId)
+    public function setSenderId($senderId)
     {
-        $this->userId = $userId;
+        $this->senderId = $senderId;
     }
 
     /**
@@ -180,17 +180,17 @@ class Parcel implements Action, JsonSerializable
     /**
      * @return mixed
      */
-    public function getAddressId()
+    public function getRecipientId()
     {
-        return $this->addressId;
+        return $this->recipientId;
     }
 
     /**
      * @param mixed $addressId
      */
-    public function setAddressId($addressId)
+    public function setRecipientId($recipientId)
     {
-        $this->addressId = $addressId;
+        $this->recipientId = $recipientId;
     }
 
 
