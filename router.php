@@ -5,12 +5,7 @@ require (__DIR__ . '/config.php');
 //connect to DB
 $conn = new DBmysql();
 $errorDB = $conn->getError();
-//check if the class parametr is set
-//if (!isset($errorDB)) {//process request if no db error
-//    include_once __DIR__.'/restEndPoints/Size.php';
-//}
 
-//$_SERVER['REQUEST_METHOD'] = 'POST';
 //get class name from URI
 $uriPathInfo = $_SERVER['REQUEST_URI'];
 //explode path info
