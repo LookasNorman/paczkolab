@@ -6,25 +6,25 @@ $(document).ready(function() {
         urlParcel = '../../router.php/parcel/';
 
     // Functions which get data from other classes
-    var optionAddress = $('#address_option'),
-        optionUser = $('#user_option'),
+    var optionRecipient = $('#recipient_option'),
+        optionSender = $('#sender_option'),
         optionSize = $('#size_option');
 
-    function showAddressOption(address) {
-        $.each(address, function(){
+    function showRecipientOption(user) {
+        $.each(user, function(){
             var option = $('<option>');
-                
-            optionAddress.append(option);
-            option.text(this.city + ' ' + this.code + ', ' + this.street + ' ' + this.flat);
+
+            optionRecipient.append(option);
+            option.text(this.name + ' ' + this.surname);
             option.attr('data-id', this.id);
         });
     }
-    
-     function showUserOption(user) {
+
+    function showSenderOption(user) {
         $.each(user, function(){
             var option = $('<option>');
                 
-            optionUser.append(option);
+            optionSender.append(option);
             option.text(this.name + ' ' + this.surname);
             option.attr('data-id', this.id);
         });
@@ -61,7 +61,8 @@ $(document).ready(function() {
             contentType: 'application/json',
             dataType: 'json'
         }).done(function (response) {
-            showUserOption(response);
+            showRecipientOption(response);
+            showSenderOption(response);
         }).fail(function (response){
             alert( "Wystąpił błąd");
         });
@@ -83,22 +84,22 @@ $(document).ready(function() {
     // Send new PARCEL to database
     $('#add-parcel input[type=submit]').on('click', function(event) {
         event.preventDefault();
-        var address = $('#address_option option:selected').attr('data-id'),
-            user = $('#user_option option:selected').attr('data-id'),
+        var recipient = $('#recipient_option option:selected').attr('data-id'),
+            sender = $('#sender_option option:selected').attr('data-id'),
             size = $('#size_option option:selected').attr('data-id');
             
         $.ajax({
             type: 'POST',
             url: urlParcel,
             data: {
-                address_id: address,
-                user_id: user,
+                recipient_id: recipient,
+                sender_id: sender,
                 size_id: size
             },
             dataType: 'json'
         }).done(function(response){
             alert('Dodano nową paczkę');
-            $('#address_option, #user_option, #size_option').val('');
+            $('#recipient_option, #sender_option, #size_option').val('');
         }).fail(function(response){
             alert( "Wystąpił błąd");
         });

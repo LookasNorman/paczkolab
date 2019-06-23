@@ -38,17 +38,15 @@ class Parcel implements Action, JsonSerializable
             $this->id = $id;
         } else {
             $dbConn = new DBmysql();
-
             $user = User::load($this->senderId);
             $credits = $user[0]->getCredits();
             $size = Size::load($this->sizeId);
             $price = $size[0]->getPrice();
-//            var_dump($price);
 
             if($credits >= $price) {
-                $query = "INSERT INTO Parcel SET sender_id=:senderId``, size_id=:sizeId, recipient_id=:recipientId";
+                $query = "INSERT INTO Parcel SET sender_id=:senderId, size_id=:sizeId, recipient_id=:recipientId";
                 $dbConn->query($query);
-                $dbConn->bind('senderId`', $this->senderId);
+                $dbConn->bind('senderId', $this->senderId);
                 $dbConn->bind('sizeId', $this->sizeId);
                 $dbConn->bind('recipientId', $this->recipientId);
                 $dbConn->execute();
