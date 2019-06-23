@@ -26,10 +26,14 @@ $(document).ready(function() {
         $.each(parcel, function(){
             var tr = $('<tr>'),
                 tdId = $('<td>', {class: "id"}),
-                tdAddress = $('<td>', {class: "address"}),
-                tdSender = $('<td>', {class: "sender"}),
-                tdName = $('<p>', {class: "name"}),
-                tdUserAddress = $('<p>', {class: "userAddress hide"}),
+                // tdAddress = $('<td>', {class: "address"}),
+                tdRecipient = $('<td>', {class: "user"}),
+                tdRecipientName = $('<p>', {class: "name"}),
+                tdRecipientAddress = $('<p>', {class: "userAddress hide"}),
+
+                tdSender = $('<td>', {class: "user"}),
+                tdSenderName = $('<p>', {class: "name"}),
+                tdSenderAddress = $('<p>', {class: "userAddress hide"}),
                 tdSize = $('<td>', {class: "size"}),
                 tdPrice = $('<td>', {class: "price"}),
                 tdAction = $('<td>', {class: "action"}),
@@ -42,8 +46,9 @@ $(document).ready(function() {
                 inputSubmit = $('<input>', {type: "submit"});
 
             // Create table element
-            tr.append(tdId, tdAddress, tdSender, tdSize, tdPrice, tdAction);
-            tdSender.append(tdName, tdUserAddress);
+            tr.append(tdId, tdRecipient, tdSender, tdSize, tdPrice, tdAction);
+            tdRecipient.append(tdRecipientName, tdRecipientAddress);
+            tdSender.append(tdSenderName, tdSenderAddress);
             tdAction.append(actionDelete, actionForm);
             actionForm.append(inputAddress, inputName, inputSize, inputPrice, inputSubmit);
             viewParcel.append(tr);
@@ -70,22 +75,22 @@ $(document).ready(function() {
                 alert( "Wystąpił błąd");
             });
 
-            // Insert proper name
-            function insertName(user) {
+            // Insert proper recipient name
+            function insertRecipientName(user) {
                 $.each(user, function() {
-                    tdName.text(this.name + ' ' + this.surname);
+                    tdRecipientName.text(this.name + ' ' + this.surname);
                 });
             }
 
             //Insert user address
-            function insertUserAddress(address) {
+            function insertRecipientAddress(address) {
                 $.each(address, function() {
-                    tdUserAddress.text(this.city + ' ' + this.code + ', ' +  this.street + ' ' + this.flat);
+                    tdRecipientAddress.text(this.city + ' ' + this.code + ', ' +  this.street + ' ' + this.flat);
                 });
             }
 
             //Get user address
-            function userAddress(user) {
+            function recipientAddress(user) {
                 $.each(user, function () {
                     var addressId = this.address_id;
                     var url = '../../router.php/address/';
@@ -95,14 +100,14 @@ $(document).ready(function() {
                         contentType: 'application/json',
                         dataType: 'json'
                     }).done(function (response) {
-                        insertUserAddress(response);
+                        insertRecipientAddress(response);
                     }).fail(function (response) {
                         alert( "Wystąpił błąd");
                     });
                 })
             }
 
-            var userId = this.user_id;
+            var userId = this.recipient_id;
             var url = '../../router.php/user/';
 
             // Show data from database USER in table
@@ -112,8 +117,56 @@ $(document).ready(function() {
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (response) {
-                insertName(response);
-                userAddress(response);
+                insertRecipientName(response);
+                recipientAddress(response);
+            }).fail(function (response) {
+                alert( "Wystąpił błąd");
+            });
+
+            // Insert proper sender name
+            function insertSenderName(user) {
+                $.each(user, function() {
+                    tdSenderName.text(this.name + ' ' + this.surname);
+                });
+            }
+
+            //Insert user address
+            function insertSenderAddress(address) {
+                $.each(address, function() {
+                    tdSenderAddress.text(this.city + ' ' + this.code + ', ' +  this.street + ' ' + this.flat);
+                });
+            }
+
+            //Get user address
+            function senderAddress(user) {
+                $.each(user, function () {
+                    var addressId = this.address_id;
+                    var url = '../../router.php/address/';
+                    $.ajax({
+                        type: 'GET',
+                        url: url + addressId,
+                        contentType: 'application/json',
+                        dataType: 'json'
+                    }).done(function (response) {
+                        insertSenderAddress(response);
+                    }).fail(function (response) {
+                        alert( "Wystąpił błąd");
+                    });
+                })
+            }
+
+            var userId = this.sender_id;
+            var url = '../../router.php/user/';
+
+            // Show data from database USER in table
+            $.ajax({
+                type: 'GET',
+                url: url + userId,
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function (response) {
+                insertSenderName(response);
+                senderAddress(response);
             }).fail(function (response) {
                 alert( "Wystąpił błąd");
             });
