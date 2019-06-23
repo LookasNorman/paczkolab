@@ -31,3 +31,10 @@ CREATE TABLE Parcel (
                         FOREIGN KEY (size_id) REFERENCES Size(id),
                         FOREIGN KEY (sender_id) REFERENCES User(id)
 );
+CREATE TABLE User_address (
+                        id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+                        user_id INT(10) UNSIGNED,
+                        address_id INT(10) UNSIGNED,
+                        FOREIGN KEY (user_id) REFERENCES User(id),
+                        FOREIGN KEY (address_id) REFERENCES Address(id)
+);
