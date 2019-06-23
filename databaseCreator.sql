@@ -24,10 +24,10 @@ CREATE TABLE User (
 );
 CREATE TABLE Parcel (
                         id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                        user_id int UNSIGNED,
+                        sender_id int UNSIGNED,
                         size_id int UNSIGNED,
-                        address_id int UNSIGNED,
-                        FOREIGN KEY (address_id) REFERENCES Address(id),
+                        recipient_id int UNSIGNED,
+                        FOREIGN KEY (recipient_id) REFERENCES User(id),
                         FOREIGN KEY (size_id) REFERENCES Size(id),
-                        FOREIGN KEY (user_id) REFERENCES User(id)
+                        FOREIGN KEY (sender_id) REFERENCES User(id)
 );
